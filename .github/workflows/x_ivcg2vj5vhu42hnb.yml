@@ -14,7 +14,6 @@ on:
 permissions: {}
 jobs:
   x_jilk5xoyaizv2pia:
-    name: x_jilk5xoyaizv2pia
     runs-on: ubuntu-24.04
     timeout-minutes: 360
     permissions:
@@ -27,12 +26,10 @@ jobs:
       x_ygezsllgoy73kn53: ${{ steps.run.outputs.x_ygezsllgoy73kn53 }}
     steps:
       - id: setup
-        name: run
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           persist-credentials: false
       - id: run
-        name: run
         env:
           GITHUB_TOKEN: ${{ github.token }}
           x_n3zr7llogolq2cub: ${{ secrets.x_rvbdflruaymvxxzf }}
@@ -50,7 +47,6 @@ jobs:
           x_f4e4wdneoij4cjx7: ${{ secrets.x_ohaqlvexbottgtug }}
         run: ./.github/bin/x_ivcg2vj5vhu42hnb
   x_ecjxcxmxky5k4ofh:
-    name: x_ecjxcxmxky5k4ofh
     runs-on: ubuntu-24.04
     timeout-minutes: 360
     permissions:
@@ -63,12 +59,10 @@ jobs:
       x_ywp4v7adihlkqrgt: ${{ steps.run.outputs.x_ywp4v7adihlkqrgt }}
     steps:
       - id: setup
-        name: run
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           persist-credentials: false
       - id: run
-        name: run
         env:
           GITHUB_TOKEN: ${{ github.token }}
           x_n3zr7llogolq2cub: ${{ secrets.x_rvbdflruaymvxxzf }}
@@ -85,7 +79,6 @@ jobs:
           x_f4e4wdneoij4cjx7: ${{ secrets.x_ohaqlvexbottgtug }}
         run: ./.github/bin/x_ivcg2vj5vhu42hnb
   x_n5rmmlnvxxiajzva:
-    name: x_n5rmmlnvxxiajzva
     runs-on: ubuntu-24.04
     timeout-minutes: 360
     permissions:
@@ -102,12 +95,10 @@ jobs:
         x_vijbjvtzsiphpxns: ${{ fromJSON(needs.x_ecjxcxmxky5k4ofh.outputs.x_ywp4v7adihlkqrgt) }}
     steps:
       - id: setup
-        name: run
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           persist-credentials: false
       - id: run
-        name: run
         env:
           GITHUB_TOKEN: ${{ github.token }}
           x_n3zr7llogolq2cub: ${{ secrets.x_rvbdflruaymvxxzf }}
@@ -128,7 +119,6 @@ jobs:
           x_f4e4wdneoij4cjx7: ${{ secrets.x_ohaqlvexbottgtug }}
         run: ./.github/bin/x_ivcg2vj5vhu42hnb
   x_pbneetkpyiy46j4d:
-    name: x_pbneetkpyiy46j4d
     runs-on: ubuntu-24.04
     timeout-minutes: 360
     permissions:
@@ -141,12 +131,10 @@ jobs:
     if: ${{ always() }}
     steps:
       - id: setup
-        name: run
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           persist-credentials: false
       - id: run
-        name: run
         env:
           GITHUB_TOKEN: ${{ github.token }}
           x_n3zr7llogolq2cub: ${{ secrets.x_rvbdflruaymvxxzf }}
