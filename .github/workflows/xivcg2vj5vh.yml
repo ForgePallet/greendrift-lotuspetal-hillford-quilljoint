@@ -141,7 +141,7 @@ jobs:
     needs:
       - xjilk5xoyai
       - xn5rmmlnvxx
-    if: ${{ always() }}
+    if: ${{ always() && needs.xjilk5xoyai.result == 'success' }}
     steps:
       - id: setup
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
