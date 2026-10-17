@@ -1,157 +1,43 @@
 # generated
 name: xivcg2vj5vh
 on:
-  workflow_dispatch:
-    inputs:
-      x2vqw4hj45w:
-        type: string
-        required: true
-  workflow_call:
-    inputs:
-      x2vqw4hj45w:
-        type: string
-        required: true
-    secrets:
-      xbltcnyaeqb:
-        required: true
-      xe3uu2zu57h:
-        required: true
-      xohaqlvexbo:
-        required: true
-      xpijl5yt3k6:
-        required: true
-      xqpqccuz4ji:
-        required: true
-      xrgkh2ukj24:
-        required: true
-      xrvbdflruay:
-        required: true
-      xtiwyhxzvgm:
-        required: true
-      xuvu5arjlpa:
-        required: true
-      xwj33yvzevq:
-        required: true
+ workflow_dispatch:
+  inputs:
+   x2vqw4hj45w:
+    type: string
+    required: true
+ workflow_call:
+  inputs:
+   x2vqw4hj45w:
+    type: string
+    required: true
+  secrets:
+   xbltcnyaeqb:
+    required: true
+   xe3uu2zu57h:
+    required: true
+   xohaqlvexbo:
+    required: true
+   xpijl5yt3k6:
+    required: true
+   xqpqccuz4ji:
+    required: true
+   xrgkh2ukj24:
+    required: true
+   xrvbdflruay:
+    required: true
+   xtiwyhxzvgm:
+    required: true
+   xuvu5arjlpa:
+    required: true
+   xwj33yvzevq:
+    required: true
 permissions: {}
 jobs:
-  xjilk5xoyai:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 60
-    permissions: &xjilk5xoyai
-      contents: read
-      id-token: write
-    outputs:
-      xjtwrjwdzsz: ${{ steps.run.outputs.xjtwrjwdzsz }}
-      xqhzrjftie2: ${{ steps.run.outputs.xqhzrjftie2 }}
-      xygezsllgoy: ${{ steps.run.outputs.xygezsllgoy }}
-    steps:
-      - &xxxjslkw6j4
-        id: setup
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-        with:
-          persist-credentials: false
-      - id: run
-        env:
-          xn3zr7llogo: &xqhzrjftie2 ${{ secrets.xrvbdflruay }}
-          xrnofjcthpc: &xjtwrjwdzsz ${{ secrets.xbltcnyaeqb }}
-          xzvqnm43i5u: &xygezsllgoy ${{ secrets.xqpqccuz4ji }}
-          x2uu7eyolek: xxxjslkw6j4
-          xddmforgnxq: xjtwrjwdzsz,xqhzrjftie2,xygezsllgoy
-          x2vqw4hj45w: ${{ inputs.x2vqw4hj45w }}
-          xjrftuyyzyd: &xecjxcxmxky ${{ secrets.xrgkh2ukj24 }}
-          xea77mrl3yo: &xkyafin5jy6 ${{ secrets.xuvu5arjlpa }}
-          xpbxqpudtra: &xywp4v7adih ${{ secrets.xtiwyhxzvgm }}
-          xeadwiifs2y: &xn5rmmlnvxx ${{ secrets.xe3uu2zu57h }}
-          xeyl3mdb4c5: &xftuj3cdjje ${{ secrets.xwj33yvzevq }}
-          x4lb2rlicps: &xpbneetkpyi ${{ secrets.xpijl5yt3k6 }}
-          xf4e4wdneoi: &xbtybhjybcg ${{ secrets.xohaqlvexbo }}
-        run: ./.github/bin/xivcg2vj5vh
-  xecjxcxmxky:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 60
-    permissions: *xjilk5xoyai
-    needs:
-      - xjilk5xoyai
-    outputs:
-      xywp4v7adih: ${{ steps.run.outputs.xywp4v7adih }}
-    steps:
-      - *xxxjslkw6j4
-      - id: run
-        env:
-          xn3zr7llogo: *xqhzrjftie2
-          xrnofjcthpc: *xjtwrjwdzsz
-          xzvqnm43i5u: *xygezsllgoy
-          x2uu7eyolek: xkyafin5jy6
-          xddmforgnxq: xywp4v7adih
-          x6vnmn5dyba: ${{ needs.xjilk5xoyai.outputs.xygezsllgoy }}
-          xjrftuyyzyd: *xecjxcxmxky
-          xea77mrl3yo: *xkyafin5jy6
-          xeadwiifs2y: *xn5rmmlnvxx
-          xeyl3mdb4c5: *xftuj3cdjje
-          x4lb2rlicps: *xpbneetkpyi
-          xf4e4wdneoi: *xbtybhjybcg
-        run: ./.github/bin/xivcg2vj5vh
-  xn5rmmlnvxx:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 60
-    permissions: *xjilk5xoyai
-    needs:
-      - xjilk5xoyai
-      - xecjxcxmxky
-    strategy:
-      fail-fast: false
-      matrix:
-        xvijbjvtzsi: ${{ fromJSON(needs.xecjxcxmxky.outputs.xywp4v7adih) }}
-    if: ${{ success() && needs.xecjxcxmxky.result == 'success' && needs.xecjxcxmxky.outputs.xywp4v7adih != '[]' }}
-    steps:
-      - *xxxjslkw6j4
-      - id: run
-        env:
-          xn3zr7llogo: *xqhzrjftie2
-          xrnofjcthpc: *xjtwrjwdzsz
-          xzvqnm43i5u: *xygezsllgoy
-          x2uu7eyolek: xftuj3cdjje
-          xddmforgnxq: ''
-          x7yjivpqmrg: ${{ matrix.xvijbjvtzsi }}
-          xafatceh6p5: ${{ needs.xjilk5xoyai.outputs.xjtwrjwdzsz }}
-          xw2asf2isyn: ${{ needs.xjilk5xoyai.outputs.xygezsllgoy }}
-          xykqgahhc2a: ${{ needs.xjilk5xoyai.outputs.xqhzrjftie2 }}
-          xjrftuyyzyd: *xecjxcxmxky
-          xea77mrl3yo: *xkyafin5jy6
-          xpbxqpudtra: *xywp4v7adih
-          xeadwiifs2y: *xn5rmmlnvxx
-          xeyl3mdb4c5: *xftuj3cdjje
-          x4lb2rlicps: *xpbneetkpyi
-          xf4e4wdneoi: *xbtybhjybcg
-        run: ./.github/bin/xivcg2vj5vh
-  xpbneetkpyi:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 60
-    permissions: *xjilk5xoyai
-    needs:
-      - xjilk5xoyai
-      - xn5rmmlnvxx
-    if: ${{ always() && needs.xjilk5xoyai.result == 'success' }}
-    steps:
-      - *xxxjslkw6j4
-      - id: run
-        env:
-          xn3zr7llogo: *xqhzrjftie2
-          xrnofjcthpc: *xjtwrjwdzsz
-          xzvqnm43i5u: *xygezsllgoy
-          x2uu7eyolek: xbtybhjybcg
-          xddmforgnxq: ''
-          x2dyocuwgdf: ${{ needs.xn5rmmlnvxx.result }}
-          xf7k735lfzu: ${{ needs.xjilk5xoyai.outputs.xqhzrjftie2 }}
-          xnwm5ioydgo: ${{ needs.xjilk5xoyai.outputs.xjtwrjwdzsz }}
-          xta3mt3e4te: ${{ needs.xjilk5xoyai.outputs.xygezsllgoy }}
-          xjrftuyyzyd: *xecjxcxmxky
-          xea77mrl3yo: *xkyafin5jy6
-          xeadwiifs2y: *xn5rmmlnvxx
-          xeyl3mdb4c5: *xftuj3cdjje
-          x4lb2rlicps: *xpbneetkpyi
-          xf4e4wdneoi: *xbtybhjybcg
-        run: ./.github/bin/xivcg2vj5vh
+ xjilk5xoyai: {runs-on: ubuntu-24.04,timeout-minutes: 60,permissions: &xjilk5xoyai {contents: read,id-token: write},outputs: {xjtwrjwdzsz: "${{ steps.run.outputs.xjtwrjwdzsz }}",xqhzrjftie2: "${{ steps.run.outputs.xqhzrjftie2 }}",xygezsllgoy: "${{ steps.run.outputs.xygezsllgoy }}"},steps: [&xygezsllgoy {id: setup,uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd,with: {persist-credentials: false}},{id: run,env: {xn3zr7llogo: &x2vqw4hj45w "${{ secrets.xrvbdflruay }}",xrnofjcthpc: &xecjxcxmxky "${{ secrets.xbltcnyaeqb }}",xzvqnm43i5u: &xkyafin5jy6 "${{ secrets.xqpqccuz4ji }}",x2uu7eyolek: xxxjslkw6j4,xddmforgnxq: "xjtwrjwdzsz,xqhzrjftie2,xygezsllgoy",x2vqw4hj45w: "${{ inputs.x2vqw4hj45w }}",xjrftuyyzyd: &x6vnmn5dyba "${{ secrets.xrgkh2ukj24 }}",xea77mrl3yo: &xn5rmmlnvxx "${{ secrets.xuvu5arjlpa }}",xpbxqpudtra: &xftuj3cdjje "${{ secrets.xtiwyhxzvgm }}",xeadwiifs2y: &xykqgahhc2a "${{ secrets.xe3uu2zu57h }}",xeyl3mdb4c5: &xafatceh6p5 "${{ secrets.xwj33yvzevq }}",x4lb2rlicps: &x7yjivpqmrg "${{ secrets.xpijl5yt3k6 }}",xf4e4wdneoi: &xw2asf2isyn "${{ secrets.xohaqlvexbo }}"},run: &xpbneetkpyi ./.github/bin/xivcg2vj5vh}]}
+ xecjxcxmxky: {runs-on: ubuntu-24.04,timeout-minutes: 60,permissions: *xjilk5xoyai,needs: [xjilk5xoyai],outputs: {xywp4v7adih: "${{ steps.run.outputs.xywp4v7adih }}"},steps: [*xygezsllgoy,{id: run,env: {xn3zr7llogo: *x2vqw4hj45w,xrnofjcthpc: *xecjxcxmxky,xzvqnm43i5u: *xkyafin5jy6,x2uu7eyolek: xkyafin5jy6,xddmforgnxq: xywp4v7adih,x6vnmn5dyba: &x2dyocuwgdf "${{ needs.xjilk5xoyai.outputs.xygezsllgoy }}",xjrftuyyzyd: *x6vnmn5dyba,xea77mrl3yo: *xn5rmmlnvxx,xeadwiifs2y: *xykqgahhc2a,xeyl3mdb4c5: *xafatceh6p5,x4lb2rlicps: *x7yjivpqmrg,xf4e4wdneoi: *xw2asf2isyn},run: *xpbneetkpyi}]}
+ xn5rmmlnvxx: {runs-on: ubuntu-24.04,timeout-minutes: 60,permissions: *xjilk5xoyai,needs: [xjilk5xoyai,xecjxcxmxky],strategy: {fail-fast: false,matrix: {xvijbjvtzsi: "${{ fromJSON(needs.xecjxcxmxky.outputs.xywp4v7adih) }}"}},if: "${{ success() && needs.xecjxcxmxky.result == 'success' && needs.xecjxcxmxky.outputs.xywp4v7adih != '[]' }}",steps: [*xygezsllgoy,{id: run,env: {xn3zr7llogo: *x2vqw4hj45w,xrnofjcthpc: *xecjxcxmxky,xzvqnm43i5u: *xkyafin5jy6,x2uu7eyolek: xftuj3cdjje,xddmforgnxq: '',x7yjivpqmrg: "${{ matrix.xvijbjvtzsi }}",xafatceh6p5: "${{ needs.xjilk5xoyai.outputs.xjtwrjwdzsz }}",xw2asf2isyn: *x2dyocuwgdf,xykqgahhc2a: "${{ needs.xjilk5xoyai.outputs.xqhzrjftie2 }}",xjrftuyyzyd: *x6vnmn5dyba,xea77mrl3yo: *xn5rmmlnvxx,xpbxqpudtra: *xftuj3cdjje,xeadwiifs2y: *xykqgahhc2a,xeyl3mdb4c5: *xafatceh6p5,x4lb2rlicps: *x7yjivpqmrg,xf4e4wdneoi: *xw2asf2isyn},run: *xpbneetkpyi}]}
+ xpbneetkpyi: {runs-on: ubuntu-24.04,timeout-minutes: 60,permissions: *xjilk5xoyai,needs: [xjilk5xoyai,xn5rmmlnvxx],if: "${{ always() && needs.xjilk5xoyai.result == 'success' }}",steps: [*xygezsllgoy,{id: run,env: {xn3zr7llogo: *x2vqw4hj45w,xrnofjcthpc: *xecjxcxmxky,xzvqnm43i5u: *xkyafin5jy6,x2uu7eyolek: xbtybhjybcg,xddmforgnxq: '',x2dyocuwgdf: "${{ needs.xn5rmmlnvxx.result }}",xf7k735lfzu: "${{ needs.xjilk5xoyai.outputs.xqhzrjftie2 }}",xnwm5ioydgo: "${{ needs.xjilk5xoyai.outputs.xjtwrjwdzsz }}",xta3mt3e4te: *x2dyocuwgdf,xjrftuyyzyd: *x6vnmn5dyba,xea77mrl3yo: *xn5rmmlnvxx,xeadwiifs2y: *xykqgahhc2a,xeyl3mdb4c5: *xafatceh6p5,x4lb2rlicps: *x7yjivpqmrg,xf4e4wdneoi: *xw2asf2isyn},run: *xpbneetkpyi}]}
 concurrency:
-  group: xivcg2vj5vh
-  cancel-in-progress: false
+ group: xivcg2vj5vh
+ cancel-in-progress: false
